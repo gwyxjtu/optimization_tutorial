@@ -1,0 +1,132 @@
+{
+    "renewable":{
+        "day_type":0,
+        "weather_type":0
+    },
+    "price":{
+        "ele_TOU_price":[0.3748,0.3748,0.3748,0.3748,0.3748,0.3748,0.3748,0.8745,0.8745,0.8745,1.4002,1.4002,1.4002,1.4002,1.4002,0.8745,0.8745,0.8745,1.4002,1.4002,1.4002,0.8745,0.8745,0.3748],
+        "power_sale":0.38,
+        "gas_price":4.085,
+
+        "hydrogen_price":200
+    },
+
+    "device":{
+
+        "mp":
+            {
+                "flow_max":100,
+                "beta_co":1.399,
+                "comment":"main pipe"
+            },
+        "fc":
+            {
+                "power_max":600,
+                "capital_cost":8000,
+                "eta_fc_p":15,
+                "eta_fc_g":16.6,
+                "theta_ex":0.95,
+                "comment":"fuel cell"
+            },
+        "el":
+            {
+                "power_max":55,
+                "capital_cost":2240,
+                "beta_el":0.0182
+            },
+        "hs":
+            {
+                "sto_max":121.8,
+                "sto_min":0,
+                "capital_cost":3000,
+                "crf":15,
+
+                "inout_max":5000,
+                "U_max":350,
+                "U_min":5,
+                "end_slack":0.1,
+                "comment":"hydrogen buffer storage tank"
+            },
+        "sc":
+            {
+                "heat_max":100000,
+                "comment":"solar collector"
+            },   
+        "eb":
+            {
+                "power_max":1200,
+                "capital_cost":100,
+                "beta_eb":0.9,
+                "comment":"electric boiler"
+            },  
+        "ec":
+            {
+                "power_max":1200,
+                "beta_ec":0.9,
+                "comment":"electric chiller"
+            },
+        "hw":
+            {
+                "water_max":100000,
+                "capital_cost":30,
+
+                "t_max":82,
+                "t_min":4,
+                "t_wetbulb":20,
+                "t_supply":55,
+                "miu_loss":0.02,
+                "end_slack":0.1,
+                "comment":"water tank"
+            },
+
+
+
+        "ghp":
+            {
+                "power_max":500,
+
+                "beta_ghpg":3.54,
+                "beta_ghpq":4,
+                "comment":"ground source heat pump"
+            },
+        "hp":
+            {
+                "power_max":500,
+                "capital_cost":3000,
+                "beta_hpg":3.54,
+                "beta_hpq":4,
+                "comment":"ground source heat pump,季节储热只能用cop了"
+            },
+
+        "gtw":
+            {
+                "number_max":42,
+                "cost":30000,
+                "crf":30,
+
+                "beta_gtw":7,
+                "comment":"ground thermal well"
+            },
+        "ct":
+            {
+                "water_max":100000,
+                "capital_cost":30,
+                "t_max":15,
+                "t_min":4,
+                "t_wetbulb":10,
+                "miu_loss":0.05,
+                "end_slack":0.1,
+                "comment":"cooling water tank"
+            },
+
+
+        "pv":
+            {
+                "area_max":10000,
+                "capital_cost":5000,
+                "beta_pv":0.21
+            }
+
+
+    }
+}

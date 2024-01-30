@@ -1,4 +1,27 @@
-# **模型约束方程**
+# **optimization_tutorial**
+本仓库为零碳能源系统组24年寒假模型优化培训资料，需要同学们做：
+
+1. 安装配置python和求解器环境，不限于gurobi
+2. 阅读Baseline模型并补全`optimization_example.py`中的代码完成测算
+3. 打包输出文件作为后续结果对比，并撰写分析报告，于收假前将代码+结果+报告打包发送至guoguoloveu@icloud.com
+
+如果想更进一步，你可以：
+1. 阅读gurobi求解器手册，理解gurobi日志，可以参考博客 [理解gurobi求解器日志｜果果的博客](https://gwyxjtu.github.io/2022/05/21/%E7%90%86%E8%A7%A3gurobi%E6%B1%82%E8%A7%A3%E5%99%A8%E6%97%A5%E5%BF%97/)
+2. 尝试使用git进行代码合作，将你的代码和报告以pull request的方式请求合并到我的仓库中，前两名提交的同学我会帮你们 Code review
+
+
+**请同学们在开发的时候注意自己的代码可读性和代码风格，祝同学们新年快乐**
+
+[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
+
+
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+
+[![forthebadge](Img/powered-by-guo.svg)](https://github.com/gwyxjtu)
+
+
+
+# **能源系统Baseline模型**
 - 主要内容：一个简化的基础能源系统模型，包括设备约束与能量平衡约束等。
 
 ## **0. 约束方程和目标函数目录**

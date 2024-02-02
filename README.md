@@ -120,7 +120,7 @@ $$
 $$
 g^{hw}_ t = c* m^{hw} *(t^{hw}_ {t+1}-t^{hw}_ {t}),\forall t \quad \\
 t^{hw,min}  \leq t^{hw}_ t \leq t^{hw,max} ,\forall t\quad  \\
-m^{hw}_ t\le M^{hw} ,\forall t
+m^{hw}\le M^{hw} ,\forall t
 $$
 
 其中 $t^{hw}_ t，g^{hw}_ t$ 分别是储热罐$t$时刻水温，换热量。 $c，m^{hw}$ 分别为热水的比热容与储热罐中换热水的质量。 $t^{hw,min}，t^{hw,max}$ 分别为储热罐的最小最大水温。
@@ -132,7 +132,7 @@ $M^{hw}$ 为热水箱规划容量。
 $$
 q^{cw}_ t = c *m^{cw} *(t^{cw}_ {t+1}-t^{cw}_ {t}),\forall t  \quad\\
 t^{cw,min}  \leq t^{cw}_ t \leq t^{cw,max} ,\forall t \quad \\
-m^{cw}_ t\le M^{cw} ,\forall t
+m^{cw}\le M^{cw} ,\forall t
 $$
 
 其中 $t^{cw}_ t，q^{cw}_ t$分别是储冷罐 $t$ 时刻水温，换冷量。 $c，m^{cw}$ 分别为冷水的比热容与储冷罐中换冷水的质量。 $t^{cw,min}，t^{cw,max}$ 分别为储冷罐的最小最大水温。

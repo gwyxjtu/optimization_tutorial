@@ -118,25 +118,22 @@ $$
 储热罐的运行约束包括换热量温度转换关系、储热量限制、以及换热量限制：
 
 $$
-g^{hw}_ t = c* m^{hw} *(t^{hw}_ {t+1}-t^{hw}_ {t}),\forall t \quad \\
-t^{hw,min}  \leq t^{hw}_ t \leq t^{hw,max} ,\forall t\quad  \\
-m^{hw}\le M^{hw} ,\forall t
+g^{hw,inout}_ t = g^{hw}_ {t+1}-g^{hw}_ {t},\forall t \quad \\
+g^{hw}_ t\le G^{hw} ,\forall t
 $$
 
-其中 $t^{hw}_ t，g^{hw}_ t$ 分别是储热罐$t$时刻水温，换热量。 $c，m^{hw}$ 分别为热水的比热容与储热罐中换热水的质量。 $t^{hw,min}，t^{hw,max}$ 分别为储热罐的最小最大水温。
-$M^{hw}$ 为热水箱规划容量。
+其中 $g^{hw}_ t, g^{hw,inout}_ t$ 分别是储热罐 $t$ 时刻储热量，换热量。
+$G^{hw}$ 为热水箱规划储热容量。
 
 #### 储冷罐
 与储热罐类似，运行约束如下：
 
 $$
-q^{cw}_ t = c *m^{cw} *(t^{cw}_ {t+1}-t^{cw}_ {t}),\forall t  \quad\\
-t^{cw,min}  \leq t^{cw}_ t \leq t^{cw,max} ,\forall t \quad \\
-m^{cw}\le M^{cw} ,\forall t
+q^{cw, inout}_ t = q^{cw}_ {t+1}-q^{cw}_ {t},\forall t  \quad\\
+q^{cw}_ t\le Q^{cw} ,\forall t
 $$
 
-其中 $t^{cw}_ t，q^{cw}_ t$分别是储冷罐 $t$ 时刻水温，换冷量。 $c，m^{cw}$ 分别为冷水的比热容与储冷罐中换冷水的质量。 $t^{cw,min}，t^{cw,max}$ 分别为储冷罐的最小最大水温。
-$M^{cw}$ 为冷水箱规划容量。
+其中 $q^{cw}_ t, q^{cw, inout}_ t$分别是储冷罐 $t$ 时刻储冷量，换冷量。 $Q^{cw}$ 为冷水箱规划容量。
 
 #### 热泵
 热泵是一种将低品位热能转化为高品位热能的装置。能源转换效率高，功耗低，具有冬热、夏冷双重功能。从能量的角度来看，热泵的输出模型如下：
@@ -225,7 +222,7 @@ $$
 投资成本即为所有规划设备的购置成本之和，本文中设备有光伏、燃料电池、热泵、电锅炉、储热罐、储冷罐、储氢罐、电解槽。
 
 $$
-E_ {cost}=c^{fc}* P^{fc}+c^{hp}* P^{hp}+c^{pv}* P^{pv}+c^{el}* P^{el}+c^{eb}* P^{eb}+c^{hw}* M^{hw}+c^{cw}* M^{cw}+c^{sto}* H^{sto}
+E_ {cost}=c^{fc}* P^{fc}+c^{hp}* P^{hp}+c^{pv}* P^{pv}+c^{el}* P^{el}+c^{eb}* P^{eb}+c^{hw}* G^{hw}+c^{cw}* Q^{cw}+c^{sto}* H^{sto}
 $$
 
 其中c为各设备的单位投资成本，P为规划容量
@@ -233,7 +230,7 @@ $$
 年化投资成本即为所有规划设备的年化投资成本之和
 
 $$
-CAPEX_ {year}=c^{fc}* P^{fc}* CRF^{fc}+c^{hp}* P^{hp}* CRF^{hp}+c^{pv}* P^{pv}* CRF^{pv}+c^{el}* P^{el}* CRF^{el}+c^{eb}* P^{eb}* CRF^{eb}+c^{hw}* M^{hw}* CRF^{hw}+c^{cw}* M^{cw}* CRF^{cw}+c^{sto}* H^{sto}* CRF^{sto}
+CAPEX_ {year}=c^{fc}* P^{fc}* CRF^{fc}+c^{hp}* P^{hp}* CRF^{hp}+c^{pv}* P^{pv}* CRF^{pv}+c^{el}* P^{el}* CRF^{el}+c^{eb}* P^{eb}* CRF^{eb}+c^{hw}* G^{hw}* CRF^{hw}+c^{cw}* Q^{cw}* CRF^{cw}+c^{sto}* H^{sto}* CRF^{sto}
 $$
 
 其中c为各设备的单位投资成本，P为规划容量，CRF为设备年化收益率。各设备的年化收益率用下式计算

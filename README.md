@@ -269,10 +269,10 @@ $$
 总收益，代表供冷、供热、供电和其他收益之和
 
 $$
-revenue=\Sigma p^{out}_ t* \lambda^{p_ {out}}_ {t}+s^{g}* \lambda^{g}+s^{q}* \lambda^{q}
+revenue=\Sigma p^{load}_ t* \lambda^{p}_ {t}+s^{g}* \lambda^{g}+s^{q}* \lambda^{q}
 $$
 
-其中 $\lambda^{p_ {out}}_ t$ 、 $\lambda^{g}$ 、 $\lambda^{q}$ 分别为t时刻的卖电电价、单位面积供热价格、单位面积供冷价格
+其中 $\lambda^{p}_ t$ 、 $\lambda^{g}$ 、 $\lambda^{q}$ 分别为t时刻的卖电电价、单位面积供热价格、单位面积供冷价格
 
 #### 静态投资回收期
 

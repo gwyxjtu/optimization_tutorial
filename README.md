@@ -195,7 +195,7 @@ $$
 #### 热供需平衡约束：
 
 $$
-g^{hw}_ t + g^{load}_ t = g^{fc}_ t + g^{hp}_ t + g^{eb}_ t,\forall t
+g^{hw, inout}_ t + g^{load}_ t = g^{fc}_ t + g^{hp}_ t + g^{eb}_ t,\forall t
 $$
 
 其中， $g^{load}_ t$ 为 $t$ 时刻负载端热需求。
@@ -203,7 +203,7 @@ $$
 #### 冷供需平衡约束：
 
 $$
-q^{cw}_ t + q^{hp}_ t = q^{load}_ t,\forall t
+q^{cw, inout}_ t + q^{hp}_ t = q^{load}_ t,\forall t
 $$
 
 其中， $q^{load}_ t$ 为 $t$ 时刻负载端冷需求。

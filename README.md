@@ -203,7 +203,7 @@ $$
 #### 冷供需平衡约束：
 
 $$
-q^{cw, inout}_ t + q^{hp}_ t = q^{load}_ t,\forall t
+q^{hp}_ t - q^{cw, inout}_ t = q^{load}_ t,\forall t
 $$
 
 其中， $q^{load}_ t$ 为 $t$ 时刻负载端冷需求。
